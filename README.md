@@ -1,7 +1,7 @@
 # python-lab
 This reporsitory is of python programming lab submitted to Manoj Varshney sir by Aryan Dahiya B.Tech Sec-l ROLL NO.-2115000212
        
-       WHILE LOOP AND FOR LOOP
+                                                                    WHILE LOOP AND FOR LOOP
        
 Ques1 -  Write a program to check wether the number is neon or not
 num=int(input("enter the number:"))
@@ -80,7 +80,7 @@ for i in range(1,11):
 lst1=list(map(lambda n1:n1*num,lst))
 print(lst1)
 
-                       LIST QUESTIONS
+                                                                   LIST QUESTIONS(lambda function)
                        
 Ques7 - print list in which all number is greater then 18
 lst=[]
@@ -124,7 +124,7 @@ lst=list(map(str,input().split()))
 lst1=list(map(lambda n:n.upper(),lst))
 print(lst1)
 
-                    DICTIONARY 
+                                                                            DICTIONARY 
                     
 Ques13 - enter a dictionary from user and find the sum of values.
 dict={}
@@ -206,7 +206,7 @@ for i in range (size):
     dict.update({keys:values})
 print(dict)
  
-              FILE HANDLING
+                                                                            FILE HANDLING
               
 Ques19 - enter a file with data and copy odd number of lines into another file
 f=open('aryan.txt','r')
@@ -549,7 +549,7 @@ def sum_num(a):
 n =int(input("Enter the numbers : "))
 print(sum_num(n))
 
-                        PATTERNS
+                                                                            PATTERNS
 
 Ques44 - write a program to print a simple pattern 
 for i in range (4):
@@ -593,7 +593,7 @@ for i in range(n):
         print("*",end="")
     print()
     
-                                    LIST AND TUPLES
+                                                                            LIST AND TUPLES
                                     
  Ques48 - convert list into tuple
  list = []
