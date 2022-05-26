@@ -80,7 +80,7 @@ for i in range(1,11):
 lst1=list(map(lambda n1:n1*num,lst))
 print(lst1)
 
-                       FOR LOOP 
+                       LIST QUESTIONS
                        
 Ques7 - print list in which all number is greater then 18
 lst=[]
@@ -311,7 +311,18 @@ str=f.readlines()
 print(str,type(str))
 f.close()
 
-Ques27 -  write a program to check if a person is eligible for vote or not
+Ques27 - write a program to find the longest word in a file
+f = open("sample.txt","r")
+l = [x for x in f.read().split()]
+long = l[0]
+for i in l[1::]:
+    if len(long) < len(i):
+        long = i
+print(long)
+
+                                                                      IF ELSE
+             
+Ques28 -  write a program to check if a person is eligible for vote or not
 a = int (input("enter the age : "))
 
 if(a>18):
@@ -320,7 +331,7 @@ if(a>18):
 else:
         print("You are not young")
         
-Ques28 - write a program to check cube of a triangle
+Ques29 - write a program to check cube of a triangle
 a = int(input("Enter the side : "))
 
 cube = (a)**3
@@ -331,7 +342,7 @@ if(cube<=0):
 else:
     print("side is equal"
     
-Ques29 - write a program to check if the number is prime or not
+Ques30 - write a program to check if the number is prime or not
 n = int(input("Enter any number : "))
 
 temp = False
@@ -348,7 +359,7 @@ if (temp):
 else:
     print("This is a Prime Number")
     
-Ques 30 - write a program to find a certain name 
+Ques 31 - write a program to find a certain name 
 names = ["aryan","anand","abhi","ronit","sam","golu"]
 
 name = input("Enter the name to check : ")
@@ -357,7 +368,7 @@ if name in names :
 else :
     print("no this name in the list")
     
-Ques31 - write a program to find greater number among four numbers
+Ques32 - write a program to find greater number among four numbers
 a = int(input("Enter the first number : "))
 b = int(input("Enter the second number : "))
 c = int(input("Enter the third number : "))
@@ -372,7 +383,7 @@ elif(c>b and c>d and c>a):
 elif(d>a and d>b and d>a):
     print("greatest number is",d)
     
-Ques32 - write a program for marks grading
+Ques33 - write a program for marks grading
 marks = int(input("Enter your marks : "))
 
 if (marks<100 and marks>90):
@@ -388,7 +399,7 @@ elif (marks<60 and marks>50):
 else:
     print("You are failed")
     
-Ques33 - write a program to enter marks of three subject and then check if the student fail or not
+Ques34 - write a program to enter marks of three subject and then check if the student fail or not
 marks = int(input("Enter your marks : "))
 
 if (marks<100 and marks>90):
@@ -404,9 +415,9 @@ elif (marks<60 and marks>50):
 else:
     print("You are failed")
     
-    USER DEFINED FUNCTIONS 
+                                                       USER DEFINED FUNCTIONS 
     
-Ques34 - write a program to do additon,subtraction,multiplication and division
+Ques35 - write a program to do additon,subtraction,multiplication and division
 def add(x,y):
     return x+y
 def sub(x,y):
@@ -437,7 +448,7 @@ elif you == "d":
 else:
     print("Invalid input")
     
-Ques35 - convert celsius into fahrenheit
+Ques36 - convert celsius into fahrenheit
 def feh(kal):
     return kal*(9/5)+32
 
@@ -446,7 +457,7 @@ c = int(input("Enter the value of celcius : "))
 f = feh(c)
 print("The value in fehrenhiet : "+ str(f))
 
-Ques36 -write a program to find if a number is strong or not 
+Ques37 -write a program to find if a number is strong or not 
 def strong(n):
     rem = 0
     temp = n
@@ -466,7 +477,7 @@ def strong(n):
 
 n = int(input())
 
-Ques37 -write a program to count the frequency of a string 
+Ques38 -write a program to count the frequency of a string 
 def freq(n):
     d = {}
     for i in n:
@@ -478,7 +489,7 @@ def freq(n):
 a = input("Enter the number: ")
 print(freq(a))
 
-Ques38 - write a program to merge two dictionary
+Ques39 - write a program to merge two dictionary
 def merge(dict , dist1):
     return (dist1.update(dict))
 dict = {1:2, 3:4, 5:6}
@@ -488,7 +499,7 @@ print(merge(dict,dict1))
 
 print(dict1)
 
-Ques39 - write a program to check if the given string is palindrome or not
+Ques40 - write a program to check if the given string is palindrome or not
 def pali(a):
     b = a[-1::-1]
     if (b==a):
@@ -499,7 +510,7 @@ def pali(a):
 a = input("Enter a string : ")
 pali(a)
 
-Ques40 - write a program to print fibonacci series
+Ques41 - write a program to print fibonacci series
 n = int(input("Enter the range : "))
 def fibonacci():
     a=0
@@ -508,3 +519,182 @@ def fibonacci():
         print(b)
         a,b= b,a+b
 o = fibonacci()
+
+Ques42 - write a program to print reverse of a number and string
+def reverse(n):
+    rev = 0
+    while (n!=0):
+        digit = n % 10
+        rev = rev*10+digit
+        n  = n//10
+    return rev
+def rev_str(d):
+    str = " "
+    for i in d:
+        str = i +str
+    return str
+
+a =int(input("Enter the number : "))
+s =input("Enter the character : ")
+
+print(reverse(a))
+print(rev_str(s))
+
+Ques43 - write a program to print sum of the digits
+def sum_num(a):
+    sum = 0
+    for i in str(a):
+        sum += int(i)
+    return sum
+n =int(input("Enter the numbers : "))
+print(sum_num(n))
+
+                        PATTERNS
+
+Ques44 - write a program to print a simple pattern 
+for i in range (4):
+    for j in range (4):
+       print("* ",end="")
+
+    print()
+    
+Ques45 - write a program to print a pattern2
+n=int(input())
+for i in range (n):
+    for j in range (n-i):
+        print("*",end="")
+    for k in range(2*i):
+        print(" ",end="")
+    for l in range(n-i):
+        print("*",end="")
+    print()
+    
+Ques46 - write a program to print a pattern3
+n=int(input())
+for i in range (n):
+    for j in range (n-i):
+        print("*",end="")
+    for k in range(2*i):
+        print(" ",end="")
+    for l in range(n-i):
+        print("*",end="")
+    print()
+    
+Ques47 - write a program to print a pattern4
+n = int(input())
+for i in range(n):
+    for j in range(i+1):
+        print("*",end="")
+    for k in range(n-1-i):
+        print(" ",end="")
+    for m in range(n-1-i):
+        print(" ",end="")
+    for l in range(i+1):
+        print("*",end="")
+    print()
+    
+                                    LIST AND TUPLES
+                                    
+ Ques48 - convert list into tuple
+ list = []
+n = int(input("Enter the length of list : "))
+for i in range (n):
+    tuple = ()
+    for j in range (n):
+        y = int(input())
+        tuple += y,
+    list.append(tuple)
+print(list)
+
+Ques49 - print a matrix
+list = []
+for i in range (3):
+    list1 =[]
+    for j in range (3):
+      list1.append(int(input()))
+    list.append(list1)
+for i in range (3):
+    for j in range (3):
+        print(list[i][j], end=' ')
+    print()
+for i in range(3):
+    for j in range(3):
+        if ( i == 3//2 and j == 3//2):
+            print(" ",end=" ")
+        else:
+            print(list[i][j],end=" ")
+    print()
+    
+Ques50 - count number of element in a given tuple
+a = (2,5,7,46,9)
+a.count(5)
+print(a)
+
+Ques51 - list comprehension
+l = list(map(eval,input().split()))
+l1 = list(map(eval,input().split()))
+l2 = []
+
+c = len(l)
+for i in range (c):
+    l3 = []
+    l3.append(l[i])
+    l3.append(l1[i])
+    l2.append(l3)
+print(l2)
+
+Ques52 - write a program to merge all elements
+list = []
+n = int(input("enter the length  : "))
+for i in range (n):
+    ele = int(input("Enter the element of first : "))
+    list.append(ele)
+print("Element in first list : ",list)
+
+list1 = []
+n1 = int(input("enter the length : "))
+for i in range (n1):
+    ele = int(input("Enter the element of second :"))
+    list1.append(ele)
+print("Element in second list : ",list)
+
+a = zip(list,list1)
+print(set(a))
+
+Ques53 - write a program to print anti diagonal of a matrix
+n = int(input())
+list = []
+for i in range (n):
+    list1 = []
+    for j in range (n):
+        list1.append(int(input()))
+    list.append(list1)
+for i in range (n):
+    for j in range (n):
+        print(list[i][j],end= " ")
+    print()
+print("result--->")
+for i in range (n):
+    for j in range (n):
+        if (i+j==n-1):
+            print(list[i][j],end=" ")
+    print() 
+    
+ Ques54 - program to print lower half of a matrix
+ list = []
+for i in range (3):
+    list1 = []
+    for j in range (3):
+        list1.append(int(input()))
+    list.append(list1)
+for i in range (3):
+    for j in range (3):
+        print(list[i][j], end=' ')
+    print()
+print("Result ---->")
+for i in range (3):
+    for j in range (3-i):
+        print(" ", end=' ')
+    for k in range (i+1):
+        print(list[j][i], end=' ')
+    print()
