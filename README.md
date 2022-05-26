@@ -1,6 +1,8 @@
 # python-lab
 This reporsitory is of python programming lab submitted to Manoj Varshney sir by Aryan Dahiya B.Tech Sec-l ROLL NO.-2115000212
-
+       
+       WHILE LOOP AND FOR LOOP
+       
 Ques1 -  Write a program to check wether the number is neon or not
 num=int(input("enter the number:"))
 temp=num*num
@@ -78,6 +80,8 @@ for i in range(1,11):
 lst1=list(map(lambda n1:n1*num,lst))
 print(lst1)
 
+                       FOR LOOP 
+                       
 Ques7 - print list in which all number is greater then 18
 lst=[]
 lst=list(map(int,input().split()))
@@ -120,6 +124,8 @@ lst=list(map(str,input().split()))
 lst1=list(map(lambda n:n.upper(),lst))
 print(lst1)
 
+                    DICTIONARY 
+                    
 Ques13 - enter a dictionary from user and find the sum of values.
 dict={}
 size=int(input("enter the size of the dict:"))
@@ -191,7 +197,7 @@ if check in dict.keys():
 else:
     print("key not found!")
     
-Ques18 - enter a dictionary from user and print the multiplicayion of all keys and values
+Ques18 - enter a dictionary from user and print the multiplicaTion of all keys and values
 dict={}
 size=int(input("enter the size of the dict:"))
 for i in range (size):
@@ -199,7 +205,9 @@ for i in range (size):
     values=int(input())
     dict.update({keys:values})
 print(dict)
-
+ 
+              FILE HANDLING
+              
 Ques19 - enter a file with data and copy odd number of lines into another file
 f=open('aryan.txt','r')
 f1=open("a.txt","w+")
@@ -303,4 +311,200 @@ str=f.readlines()
 print(str,type(str))
 f.close()
 
-Ques27 - 
+Ques27 -  write a program to check if a person is eligible for vote or not
+a = int (input("enter the age : "))
+
+if(a>18):
+    print("You are now young")
+
+else:
+        print("You are not young")
+        
+Ques28 - write a program to check cube of a triangle
+a = int(input("Enter the side : "))
+
+cube = (a)**3
+
+if(cube<=0):
+    print("side is unequal")
+
+else:
+    print("side is equal"
+    
+Ques29 - write a program to check if the number is prime or not
+n = int(input("Enter any number : "))
+
+temp = False
+
+if(n>1):
+    for i in range (2 , n):
+        if(n%i==0):
+            temp = True
+            break
+
+if (temp):
+    print("This is not a Prime Number")
+
+else:
+    print("This is a Prime Number")
+    
+Ques 30 - write a program to find a certain name 
+names = ["aryan","anand","abhi","ronit","sam","golu"]
+
+name = input("Enter the name to check : ")
+if name in names :
+    print("yes this name in the list")
+else :
+    print("no this name in the list")
+    
+Ques31 - write a program to find greater number among four numbers
+a = int(input("Enter the first number : "))
+b = int(input("Enter the second number : "))
+c = int(input("Enter the third number : "))
+d = int(input("Enter the fourth number : "))
+
+if (a>b and a>c and a>d):
+    print("greatest number is",a)
+elif(b>a and b>c and b>d):
+    print("greatest number is",b)
+elif(c>b and c>d and c>a):
+    print("greatest number is",c)
+elif(d>a and d>b and d>a):
+    print("greatest number is",d)
+    
+Ques32 - write a program for marks grading
+marks = int(input("Enter your marks : "))
+
+if (marks<100 and marks>90):
+    print("Your Grade is EX")
+elif (marks<90 and marks>80):
+    print("Your Grade is A")
+elif (marks<80 and marks>70):
+    print("Your Grade is B")
+elif (marks<70 and marks>60):
+    print("Your Grade is C")
+elif (marks<60 and marks>50):
+    print("Your Grade is D")
+else:
+    print("You are failed")
+    
+Ques33 - write a program to enter marks of three subject and then check if the student fail or not
+marks = int(input("Enter your marks : "))
+
+if (marks<100 and marks>90):
+    print("Your Grade is EX")
+elif (marks<90 and marks>80):
+    print("Your Grade is A")
+elif (marks<80 and marks>70):
+    print("Your Grade is B")
+elif (marks<70 and marks>60):
+    print("Your Grade is C")
+elif (marks<60 and marks>50):
+    print("Your Grade is D")
+else:
+    print("You are failed")
+    
+    USER DEFINED FUNCTIONS 
+    
+Ques34 - write a program to do additon,subtraction,multiplication and division
+def add(x,y):
+    return x+y
+def sub(x,y):
+    return x-y
+def mul(x,y):
+    return x*y
+def div(x,y):
+    return x/y
+
+n = int(input("Enter for first value : "))
+n1 = int(input("Enter for second value : "))
+
+print('''For Additition (a)
+For Subtraction (s)
+For Multipication (m)
+For Divide (d) ''')
+
+you = input("Choice one a/s/m/d : ")
+
+if you == "a":
+    print(f"{n} + {n1} = ",add(n,n1))
+elif you == "s":
+    print(f"{n} - {n1} = ",sub(n,n1))
+elif you == "m":
+    print(f"{n} x {n1} = ",mul(n,n1))
+elif you == "d":
+    print(f"{n} / {n1} = ",div(n,n1))
+else:
+    print("Invalid input")
+    
+Ques35 - convert celsius into fahrenheit
+def feh(kal):
+    return kal*(9/5)+32
+
+c = int(input("Enter the value of celcius : "))
+
+f = feh(c)
+print("The value in fehrenhiet : "+ str(f))
+
+Ques36 -write a program to find if a number is strong or not 
+def strong(n):
+    rem = 0
+    temp = n
+    total = 0
+    while (temp):
+        rem = temp % 10
+        fact = 1
+        while (rem):
+            fact = fact*rem
+            rem = rem - 1
+        total = total + fact 
+        temp = temp // 10
+    if (total == n):
+        print("This is a strong number")
+    else:
+        print("This is not a strong number")
+
+n = int(input())
+
+Ques37 -write a program to count the frequency of a string 
+def freq(n):
+    d = {}
+    for i in n:
+        if i in d.keys():
+            d[i] += 1
+        else :
+            d[i] = 1
+    return d
+a = input("Enter the number: ")
+print(freq(a))
+
+Ques38 - write a program to merge two dictionary
+def merge(dict , dist1):
+    return (dist1.update(dict))
+dict = {1:2, 3:4, 5:6}
+dict1 = {7:8, 9:0, 11:12}
+
+print(merge(dict,dict1))
+
+print(dict1)
+
+Ques39 - write a program to check if the given string is palindrome or not
+def pali(a):
+    b = a[-1::-1]
+    if (b==a):
+        print("This string is Palindrome")
+    else:
+        print("Not palindrome")
+    return b
+a = input("Enter a string : ")
+pali(a)
+
+Ques40 - write a program to print fibonacci series
+n = int(input("Enter the range : "))
+def fibonacci():
+    a=0
+    b=1
+    for i in range(n):
+        print(b)
+        a,b= b,a+b
+o = fibonacci()
